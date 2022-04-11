@@ -1,20 +1,20 @@
 import * as React from 'react';
 import {
   Box,
-  CssBaseline,
   Dialog,
+  Divider,
   Grid,
+  Paper,
   Slide,
-  ThemeProvider,
   Typography,
 } from '@mui/material';
-import Copyright from '../components/Copyright';
 import Footer from '../components/Footer';
 import HeroUnit from '../components/HeroUnit';
 import ResponsiveAppBar from '../components/ResponsiveAppBar';
 import { TransitionProps } from '@mui/material/transitions';
-import bryllupLogo from '../images/bryllup.png';
 import { useParams } from 'react-router-dom';
+import Banner from '../components/Banner';
+import DividerText from '../components/DividerText';
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -30,22 +30,15 @@ export default function Home() {
   const [open, setOpen] = React.useState(visited ? false : true);
 
   return (
-    <div style={{ minHeight: '100%' }}>
+    <div style={{ minWidth: '100%' }}>
       {!open && (
         <>
           <ResponsiveAppBar />
-          <HeroUnit />
-          <div
-            style={{
-              position: 'absolute',
-              bottom: 0,
-              width: '100%',
-              height: '3rem',
-            }}
-          >
-            <Footer />
-            <Copyright />
-          </div>
+          <Grid item xs={12} md={6} alignItems="center" justifyContent="center">
+            <Banner />
+            <DividerText />
+          </Grid>
+          <Footer />
         </>
       )}
 
@@ -66,7 +59,7 @@ export default function Home() {
             <Grid item xs={12}>
               <div style={{ width: '90%', margin: 'auto' }}>
                 <img
-                  src={bryllupLogo}
+                  src={require('../images/bryllup.png')}
                   height="auto"
                   style={{ maxWidth: '100%' }}
                 />

@@ -6,6 +6,8 @@ import Sted from './pages/Sted';
 import { ThemeProvider } from '@emotion/react';
 import { CssBaseline } from '@mui/material';
 import { theme } from './utils/Theme';
+import Tid from './pages/Tid';
+import Gaveonsker from './pages/Gaveonsker';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             </Route>
             <Route path="/toast" element={<Toast />} />
             <Route path="/sted" element={<Sted />} />
+            <Route path="/tid" element={<Tid />} />
+            <Route path="/gaver" element={<Gaveonsker />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

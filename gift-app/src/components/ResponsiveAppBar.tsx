@@ -9,13 +9,17 @@ import { IconButton, Menu, MenuItem } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const HOME = 'Hjem';
-const TID_OG_STED = 'Tid og sted';
-const TOAST = 'Toastmaster';
+const TID = 'Tid';
+const STED = 'Sted';
+const TOAST = 'Toastmastere';
+const GAVER = 'Gaveønsker';
 
 const pages = [
   { name: HOME, uri: '/visited' },
-  { name: TID_OG_STED, uri: '/sted' },
+  { name: TID, uri: '/tid' },
+  { name: STED, uri: '/sted' },
   { name: TOAST, uri: '/toast' },
+  { name: GAVER, uri: '/gaver' },
 ];
 
 const ResponsiveAppBar = () => {
@@ -35,12 +39,13 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky" sx={{minHeight: 64}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
+                size="large"
                 key={page.name}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}

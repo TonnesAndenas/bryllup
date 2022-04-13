@@ -6,10 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import DirectionsRoundedIcon from '@mui/icons-material/DirectionsRounded';
-import { Margin } from '@mui/icons-material';
-import { Container, Grid } from '@mui/material';
-
-//sx={{maxWidth: 'auto', marginX: "35%", marginY: "calc(100% / 50)"}}
+import { Grid, IconButton } from '@mui/material';
 
 export default function CardSolstua() {
   return (
@@ -29,7 +26,7 @@ export default function CardSolstua() {
             margin: 'auto 0',
             marginY: '5%',
             marginX: '10%',
-            padding: '4%'
+            padding: '4%',
           }}
         >
           <CardMedia
@@ -46,15 +43,16 @@ export default function CardSolstua() {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button
-              component="span"
-              size="large"
-              variant="contained"
+            <IconButton
               href="https://g.page/solstua?share"
-              endIcon={<DirectionsRoundedIcon />}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Google Maps
-            </Button>
+              <Button variant="contained" size="large">
+                <DirectionsRoundedIcon />
+                Google Maps
+              </Button>
+            </IconButton>
           </CardActions>
         </Card>
       </Grid>

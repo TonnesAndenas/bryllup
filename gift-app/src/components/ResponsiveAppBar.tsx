@@ -5,14 +5,15 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import { IconButton, Menu, MenuItem } from '@mui/material';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { IconButton, Menu, MenuItem, Typography } from '@mui/material';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import { text } from 'stream/consumers';
 
 const HOME = 'Hjem';
 const TID = 'Tid';
 const STED = 'Sted';
 const TOAST = 'Toastmastere';
-const GAVER = 'Gaveønsker';
+const GAVER = 'Ønskeliste';
 
 const pages = [
   { name: HOME, uri: '/visited' },
@@ -39,10 +40,21 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="sticky" sx={{minHeight: 64}}>
+    <AppBar position="sticky" sx={{ minHeight: 64 }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              justifyContent: 'left',
+              display: { xs: 'none', md: 'flex' },
+            }}
+          >
+            <Typography variant="h6" color="text.secondary">
+              9. Juli 2022
+            </Typography>
+          </Box>
+          <Box sx={{ flexGrow: 1, justifyContent: 'left', display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 size="large"
@@ -50,13 +62,15 @@ const ResponsiveAppBar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page.name}
+                <Typography variant="h6">{page.name}</Typography>
               </Button>
             ))}
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton onClick={handleClick}>
-              <MoreVertIcon />
+            <IconButton onClick={handleClick} size='large'>
+            <Button size="large">
+            <MenuRoundedIcon sx={{ color: "text.primary" }}/>
+              </Button>
             </IconButton>
             <Menu
               id="long-menu"
@@ -70,6 +84,18 @@ const ResponsiveAppBar = () => {
                 </MenuItem>
               ))}
             </Menu>
+          </Box>
+
+          <Box
+            sx={{
+              flexGrow: 1,
+              justifyContent: 'center',
+              display: { xs: 'flex', md: 'none' },
+            }}
+          >
+            <Typography variant="h6" color="text.secondary">
+              9. Juli 2022
+            </Typography>
           </Box>
         </Toolbar>
       </Container>

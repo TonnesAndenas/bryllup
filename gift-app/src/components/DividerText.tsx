@@ -49,11 +49,11 @@ export default function DividerText() {
     >
       <Grid container>
         <Grid item xs sx={{ paddingTop: 16, paddingX: 8, paddingBottom: 8 }}>
-          {content1}
+          {content2}
         </Grid>
         <Divider orientation="vertical" flexItem></Divider>
         <Grid item xs sx={{ paddingTop: 16, paddingX: 8, paddingBottom: 8 }}>
-          {content2}
+          {content1}
         </Grid>
       </Grid>
     </Paper>

@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import { IconButton, Menu, MenuItem, Typography } from '@mui/material';
+import { Grid, IconButton, Menu, MenuItem, Typography } from '@mui/material';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 const HOME = 'Hjem';
@@ -47,68 +47,91 @@ const ResponsiveAppBar = ({ displayHeader }: ResponsiveAppBarProps) => {
       position="sticky"
       sx={{ minHeight: 64, display: displayHeader ? 'none' : 'flex' }}
     >
-      <Container maxWidth="xl">
-        <Toolbar>
-          <Box
-            sx={{
-              flexGrow: 1,
-              justifyContent: 'left',
-              display: { xs: 'none', md: 'flex' },
-            }}
+      <Container maxWidth="xl" disableGutters>
+        <Toolbar disableGutters>
+          <Grid
+            container
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
           >
-            <Typography variant="h6" color="text.secondary">
-              9. Juli 2022
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              flexGrow: 1,
-              justifyContent: 'left',
-              display: { xs: 'none', md: 'flex' },
-            }}
-          >
-            {pages.map((page) => (
-              <Button
-                size="large"
-                key={page.name}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                <Typography variant="h6">{page.name}</Typography>
-              </Button>
-            ))}
-          </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton onClick={handleClick} size="large">
-              <Button size="large">
-                <MenuRoundedIcon sx={{ color: 'text.primary' }} />
-              </Button>
-            </IconButton>
-            <Menu
-              id="long-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
+            <Grid
+              item
+              xs={2}
+              sx={{
+                display: { xs: 'none', md: 'flex' },
+              }}
+            >
+              <Typography variant="h6" color="text.secondary">
+                9. Juli 2022
+              </Typography>
+            </Grid>
+
+            <Grid
+              item
+              xs={8}
+              sx={{
+                justifyContent: 'center',
+                justifySelf: 'center',
+                display: {
+                  xs: 'none',
+                  md: 'flex',
+                },
+              }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  {page.name}
-                </MenuItem>
+                <Button
+                  size="large"
+                  key={page.name}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  <Typography variant="h6">{page.name}</Typography>
+                </Button>
               ))}
-            </Menu>
-          </Box>
+            </Grid>
 
-          <Box
-            sx={{
-              flexGrow: 1,
-              justifyContent: 'center',
-              display: { xs: 'flex', md: 'none' },
-            }}
-          >
-            <Typography variant="h6" color="text.secondary">
-              9. Juli 2022
-            </Typography>
-          </Box>
+            <Grid
+              item
+              xs={2}
+              sx={{
+                display: { xs: 'none', md: 'flex' },
+              }}
+            />
+
+            <Grid item sx={{ display: { xs: 'flex', md: 'none' } }}>
+              <IconButton onClick={handleClick} size="large">
+                <Button size="large">
+                  <MenuRoundedIcon sx={{ color: 'text.primary' }} />
+                </Button>
+              </IconButton>
+              <Menu
+                id="long-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClick={handleClose}
+                onClose={handleClose}
+              >
+                {pages.map((page) => (
+                  <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                    {page.name}
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Grid>
+
+            <Grid
+              item
+              sx={{
+                display: { xs: 'flex', md: 'none' },
+                paddingRight: '64px',
+              }}
+            >
+              <Typography variant="h6" color="text.secondary">
+                9. Juli 2022
+              </Typography>
+            </Grid>
+          </Grid>
         </Toolbar>
       </Container>
     </AppBar>

@@ -8,12 +8,12 @@ import ResponsiveAppBar from '../components/ResponsiveAppBar';
 export default function Sted() {
   return (
     <Grid
-    container
-    direction="column"
-    justifyContent="center"
-    alignItems="center"
-    padding={5}
-  >
+      container
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+      padding={5}
+    >
       <CardSolstua />
     </Grid>
   );

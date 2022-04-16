@@ -11,10 +11,13 @@ export default function BannerToast() {
           image={require('../images/munchBohemensBryllup.jpg')}
         />
         <CardContent>
-          <Typography gutterBottom variant="h4" component="div">
-            Toastmastere Marie Kinge og Jonas Thorsdalen Wik
+          <Typography variant="h4" component="div" textAlign={'center'}>
+            Marie Kinge
           </Typography>
-          <Typography variant="body1" color="text.secondary">
+          <Typography gutterBottom variant="h4" component="div" textAlign={'center'}>
+            Jonas Th Wik
+          </Typography>
+          <Typography variant="h6" color="text.secondary">
             De kan kontaktes på blablaabl
           </Typography>
         </CardContent>

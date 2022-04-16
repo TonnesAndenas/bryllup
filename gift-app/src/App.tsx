@@ -8,16 +8,24 @@ import { CssBaseline } from '@mui/material';
 import { theme } from './utils/Theme';
 import Tid from './pages/Tid';
 import Gaveonsker from './pages/Gaveonsker';
+import ResponsiveAppBar from './components/ResponsiveAppBar';
+import Footer from './components/Footer';
 
 function App() {
+  const [open, setOpen] = React.useState(true);
   return (
     <div style={{ minHeight: '100vh' }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <BrowserRouter>
+          <ResponsiveAppBar displayHeader={open}/>
+
           <Routes>
-            <Route path="/" element={<Home />}>
-              <Route path=":visited" element={<Home />} />
+            <Route path="/" element={<Home open={open} setOpen={setOpen} />}>
+              <Route
+                path=":visited"
+                element={<Home open={false} setOpen={setOpen} />}
+              />
             </Route>
             <Route path="/toast" element={<Toast />} />
             <Route path="/sted" element={<Sted />} />
@@ -25,6 +33,7 @@ function App() {
             <Route path="/gaver" element={<Gaveonsker />} />
           </Routes>
         </BrowserRouter>
+        <Footer />
       </ThemeProvider>
     </div>
   );

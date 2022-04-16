@@ -10,24 +10,9 @@ import { Grid, IconButton } from '@mui/material';
 
 export default function CardSolstua() {
   return (
-    <Grid
-      container
-      spacing={0}
-      direction="column"
-      alignItems="center"
-      justifyContent="center"
-    >
       <Grid item xs={12}>
         <Card
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            maxWidth: 'auto',
-            margin: 'auto 0',
-            marginY: '5%',
-            marginX: '10%',
-            padding: '4%',
-          }}
+          sx={{ height: '100%', padding: '16px' }}
         >
           <CardMedia
             component="img"
@@ -42,7 +27,7 @@ export default function CardSolstua() {
               Thorleif Haugs vei 14, 0791 Oslo
             </Typography>
           </CardContent>
-          <CardActions>
+          <CardActions sx={{ alignSelf: 'end', justifySelf: 'center' }}>
             <IconButton
               href="https://g.page/solstua?share"
               target="_blank"
@@ -56,6 +41,5 @@ export default function CardSolstua() {
           </CardActions>
         </Card>
       </Grid>
-    </Grid>
   );
 }

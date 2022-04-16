@@ -1,20 +1,9 @@
 import * as React from 'react';
-import {
-  Box,
-  Dialog,
-  Divider,
-  Grid,
-  Paper,
-  Slide,
-  Typography,
-} from '@mui/material';
-import Footer from '../components/Footer';
-import HeroUnit from '../components/HeroUnit';
-import ResponsiveAppBar from '../components/ResponsiveAppBar';
+import { Box, Dialog, Grid, Slide, Typography } from '@mui/material';
 import { TransitionProps } from '@mui/material/transitions';
-import { useParams } from 'react-router-dom';
 import Banner from '../components/Banner';
 import DividerText from '../components/DividerText';
+import { Dispatch, SetStateAction } from 'react';
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -25,20 +14,20 @@ const Transition = React.forwardRef(function Transition(
   return <Slide direction="down" ref={ref} {...props} />;
 });
 
-export default function Home() {
-  const { visited } = useParams();
-  const [open, setOpen] = React.useState(visited ? false : true);
+interface HomeProps {
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+}
 
+export default function Home({ open, setOpen }: HomeProps) {
   return (
     <div style={{ minWidth: '100%' }}>
       {!open && (
         <>
-          <ResponsiveAppBar />
           <Grid item xs={12} md={6} alignItems="center" justifyContent="center">
             <Banner />
             <DividerText />
           </Grid>
-          <Footer />
         </>
       )}
 

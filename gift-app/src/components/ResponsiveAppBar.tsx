@@ -7,7 +7,6 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import { IconButton, Menu, MenuItem, Typography } from '@mui/material';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
-import { text } from 'stream/consumers';
 
 const HOME = 'Hjem';
 const TID = 'Tid';
@@ -23,7 +22,11 @@ const pages = [
   { name: GAVER, uri: '/gaver' },
 ];
 
-const ResponsiveAppBar = () => {
+interface ResponsiveAppBarProps {
+  displayHeader: boolean;
+}
+
+const ResponsiveAppBar = ({ displayHeader }: ResponsiveAppBarProps) => {
   let navigate = useNavigate();
 
   const handleCloseNavMenu = (event) => {
@@ -40,9 +43,12 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="sticky" sx={{ minHeight: 64 }}>
+    <AppBar
+      position="sticky"
+      sx={{ minHeight: 64, display: displayHeader ? 'none' : 'flex' }}
+    >
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar>
           <Box
             sx={{
               flexGrow: 1,
@@ -54,7 +60,13 @@ const ResponsiveAppBar = () => {
               9. Juli 2022
             </Typography>
           </Box>
-          <Box sx={{ flexGrow: 1, justifyContent: 'left', display: { xs: 'none', md: 'flex' } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              justifyContent: 'left',
+              display: { xs: 'none', md: 'flex' },
+            }}
+          >
             {pages.map((page) => (
               <Button
                 size="large"
@@ -67,9 +79,9 @@ const ResponsiveAppBar = () => {
             ))}
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton onClick={handleClick} size='large'>
-            <Button size="large">
-            <MenuRoundedIcon sx={{ color: "text.primary" }}/>
+            <IconButton onClick={handleClick} size="large">
+              <Button size="large">
+                <MenuRoundedIcon sx={{ color: 'text.primary' }} />
               </Button>
             </IconButton>
             <Menu

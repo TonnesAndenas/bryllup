@@ -10,49 +10,47 @@ import { Grid, IconButton } from '@mui/material';
 
 export default function CardBryllupsreise() {
   return (
-    <Grid item xs={12} md={4} style={{ display: 'flex' }}>
-      <Card
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          maxWidth: 'auto',
-          margin: 'auto 0',
-          marginY: '5%',
-          marginX: '10%',
-          padding: '4%',
-        }}
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          flexDirection: 'column',
-        }}
-      >
-        <CardMedia
-          component="img"
-          alt="Montenegro"
-          image={require('../images/montenegroTint.jpg')}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h4" component="div">
-            #2 Bryllupsreise til Montenegro!
-          </Typography>
-          <Typography variant="body1" color="text.secondary">
-            Vi reiser til Montenegro for å drikke vin og bli solbrente. Vil du
-            bidra?
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <IconButton
-            href="https://www.nrk.no/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button variant="contained" size="large">
-              <VolunteerActivismRoundedIcon />
-              Nrk.no
-            </Button>
-          </IconButton>
-        </CardActions>
+    <Grid item xs={12} md={4}>
+      <Card sx={{ height: '100%' }}>
+        <Grid
+          container
+          direction="column"
+          justifyContent="space-between"
+          alignItems="center"
+          minHeight="100%"
+        >
+          <Grid item>
+            <CardMedia
+              component="img"
+              alt="Montenegro"
+              image={require('../images/montenegroApolloTint.jpg')}
+            />
+            <CardContent sx={{ minHeigth: '40%' }}>
+              <Typography gutterBottom variant="h4" component="div">
+                #2 Bryllupsreise til Montenegro!
+              </Typography>
+              <Typography variant="body1" color="text.secondary">
+                Vi reiser til Montenegro for å drikke vin og bli solbrente. Vil
+                du bidra?
+              </Typography>
+            </CardContent>
+          </Grid>
+
+          <Grid item>
+            <CardActions>
+              <IconButton
+                href="https://www.nrk.no/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="contained" size="large">
+                  <VolunteerActivismRoundedIcon />
+                  Nrk.no
+                </Button>
+              </IconButton>
+            </CardActions>
+          </Grid>
+        </Grid>
       </Card>
     </Grid>
   );

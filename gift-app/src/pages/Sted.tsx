@@ -7,13 +7,14 @@ import ResponsiveAppBar from '../components/ResponsiveAppBar';
 
 export default function Sted() {
   return (
-    <div>
-      <ResponsiveAppBar />
-      <Grid item xs={12} md={6} alignItems="center" justifyContent="center">
-        <CardSolstua />
-      </Grid>
-
-      <Footer />
-    </div>
+    <Grid
+    container
+    direction="column"
+    justifyContent="center"
+    alignItems="center"
+    padding={5}
+  >
+      <CardSolstua />
+    </Grid>
   );
 }

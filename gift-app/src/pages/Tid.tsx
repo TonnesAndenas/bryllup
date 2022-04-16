@@ -5,12 +5,14 @@ import ResponsiveAppBar from '../components/ResponsiveAppBar';
 
 export default function Tid() {
   return (
-    <div>
-      <ResponsiveAppBar />
-      <Grid item xs={12} md={6} alignItems="center" justifyContent="center">
-        <CustomizedTimeline />
-      </Grid>
-      <Footer />
-    </div>
+    <Grid
+    container
+    direction="column"
+    justifyContent="center"
+    alignItems="center"
+    padding={5}
+  >
+      <CustomizedTimeline />
+    </Grid>
   );
 }

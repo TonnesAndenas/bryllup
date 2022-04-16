@@ -1,6 +1,5 @@
 import { Box, Divider, Typography } from '@mui/material';
 import * as React from 'react';
-import Copyright from './Copyright';
 
 export default function Footer() {
   return (
@@ -11,7 +10,7 @@ export default function Footer() {
         bgcolor: 'background.paper',
         paddingTop: 16,
         paddingX: 4,
-        paddingBottom: 4
+        paddingBottom: 4,
       }}
       component="footer"
     >

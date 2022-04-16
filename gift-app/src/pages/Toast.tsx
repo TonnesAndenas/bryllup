@@ -1,13 +1,16 @@
-import Footer from '../components/Footer';
-import HeroTest from '../components/HeroTest';
-import ResponsiveAppBar from '../components/ResponsiveAppBar';
+import { Grid } from '@mui/material';
+import BannerToast from '../components/BannerToast';
 
 export default function Toast() {
   return (
-    <div>
-      <ResponsiveAppBar />
-      <HeroTest />
-      <Footer />
-    </div>
+    <Grid
+      container
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+      padding={5}
+    >
+      <BannerToast />
+    </Grid>
   );
 }

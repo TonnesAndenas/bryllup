@@ -21,45 +21,61 @@ interface HomeProps {
 
 export default function Home({ open, setOpen }: HomeProps) {
   return (
-    <div style={{ minWidth: '100%' }}>
-      {!open && (
-        <>
-          <Grid item xs={12} md={6} alignItems="center" justifyContent="center">
-            <Banner />
-            <DividerText />
-          </Grid>
-        </>
-      )}
-
-      <Dialog
-        fullScreen
-        open={open}
-        TransitionComponent={Transition}
-        transitionDuration={1000}
-      >
-        <Box
-          onClick={() => setOpen(false)}
-          sx={{ width: '100%', height: '100%' }}
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
+    <Grid
+      container
+      xs={12}
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Grid item xs={10}>
+        <Dialog
+          fullScreen
+          open={open}
+          TransitionComponent={Transition}
+          transitionDuration={1200}
         >
-          <Grid>
-            <Grid item xs={12}>
-              <div style={{ width: '90%', margin: 'auto' }}>
-                <img
-                  src={require('../images/bryllup.png')}
-                  height="auto"
-                  style={{ maxWidth: '100%' }}
-                />
-              </div>
-            </Grid>
+          <Grid
+            container
+            xs={12}
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            onClick={() => setOpen(false)}
+          >
+            <img src={require('../images/bryllup.png')} height="90%" />
+
             <Typography variant="h4" align="center">
               Velkommen!
             </Typography>
           </Grid>
-        </Box>
-      </Dialog>
-    </div>
+        </Dialog>
+      </Grid>
+
+      <Grid
+        container
+        xs={12}
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+        sx={{ display: open ? 'none' : 'flex' }}
+      >
+        <Grid item xs={12}>
+          <Banner />
+        </Grid>
+        <Grid
+          container
+          xs={12}
+          direction="row"
+          justifyContent="center"
+          alignItems="stretch"
+
+        >
+          <Grid item xs={4} md={8}>
+            <DividerText />
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
   );
 }

@@ -1,16 +1,15 @@
-import { Box, Divider, Typography } from '@mui/material';
+import { Box, Divider, Grid, Typography } from '@mui/material';
 import * as React from 'react';
 
 export default function Footer() {
   return (
-    <Box
+    <Grid
       sx={{
         position: 'static',
-        height: '100%',
         bgcolor: 'background.paper',
-        paddingTop: 16,
-        paddingX: 4,
-        paddingBottom: 4,
+        paddingTop: "64px",
+        paddingX: "16px",
+        paddingBottom: "16px",
       }}
       component="footer"
     >
@@ -20,6 +19,6 @@ export default function Footer() {
         {new Date().getFullYear()}
         {'.'}
       </Typography>
-    </Box>
+    </Grid>
   );
 }

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
@@ -13,6 +12,7 @@ const TID = 'Tid';
 const STED = 'Sted';
 const TOAST = 'Toastmastere';
 const GAVER = 'Ønskeliste';
+const SVAR = 'Svar';
 
 const pages = [
   { name: HOME, uri: '/visited' },
@@ -20,6 +20,7 @@ const pages = [
   { name: STED, uri: '/sted' },
   { name: TOAST, uri: '/toast' },
   { name: GAVER, uri: '/gaver' },
+  { name: SVAR, uri: '/svar' },
 ];
 
 interface ResponsiveAppBarProps {
@@ -43,21 +44,19 @@ const ResponsiveAppBar = ({ displayHeader }: ResponsiveAppBarProps) => {
   };
 
   return (
-    <AppBar
-      position="sticky"
-      sx={{ minHeight: 64, display: displayHeader ? 'none' : 'flex' }}
-    >
+    <AppBar position="sticky" sx={{ display: displayHeader ? 'none' : 'flex' }}>
       <Container maxWidth="xl" disableGutters>
         <Toolbar disableGutters>
           <Grid
             container
             direction="row"
             justifyContent="space-between"
-            alignItems="center"
+            alignItems="baseline"
           >
             <Grid
               item
               xs={2}
+              justifyContent="center"
               sx={{
                 display: { xs: 'none', md: 'flex' },
               }}
@@ -79,16 +78,36 @@ const ResponsiveAppBar = ({ displayHeader }: ResponsiveAppBarProps) => {
                 },
               }}
             >
-              {pages.map((page) => (
-                <Button
-                  size="large"
-                  key={page.name}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
-                >
-                  <Typography variant="h6">{page.name}</Typography>
-                </Button>
-              ))}
+              {pages.map((page, index) =>
+                index === pages.length - 1 ? (
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    size="large"
+                    key={page.name}
+                    onClick={handleCloseNavMenu}
+                    style={{ border: '2px solid' }}
+                    sx={{
+                      my: '16px',
+                      color: 'text.primary',
+                      paddingTop: '12px',
+                    }}
+                  >
+                    <Typography variant="h6" style={{ fontWeight: 'bold' }}>
+                      {page.name}
+                    </Typography>
+                  </Button>
+                ) : (
+                  <Button
+                    size="large"
+                    key={page.name}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: '16px', color: 'white', paddingTop: '14px' }}
+                  >
+                    <Typography variant="h6">{page.name}</Typography>
+                  </Button>
+                )
+              )}
             </Grid>
 
             <Grid

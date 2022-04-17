@@ -10,6 +10,7 @@ import Tid from './pages/Tid';
 import Gaveonsker from './pages/Gaveonsker';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import Footer from './components/Footer';
+import Svar from './pages/Svar';
 
 function App() {
   const [open, setOpen] = React.useState(true);
@@ -31,9 +32,10 @@ function App() {
             <Route path="/sted" element={<Sted />} />
             <Route path="/tid" element={<Tid />} />
             <Route path="/gaver" element={<Gaveonsker />} />
+            <Route path="/svar" element={<Svar />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
-        <Footer />
       </ThemeProvider>
     </div>
   );

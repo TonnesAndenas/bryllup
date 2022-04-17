@@ -20,7 +20,7 @@ export const theme = createTheme({
       light: blaaLys
     },
     secondary: {
-      main: gronn,
+      main: blaaMork,
     },
   },
 });

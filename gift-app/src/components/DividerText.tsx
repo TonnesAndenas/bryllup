@@ -18,7 +18,7 @@ export default function DividerText() {
       <Typography gutterBottom variant="h4" component="div">
         Solstua
       </Typography>
-      <Typography variant="body1" color="text.secondary">
+      <Typography variant="h6" color="text.secondary">
         Thorleif Haugs vei 14, 0791 Oslo
       </Typography>
     </div>
@@ -26,33 +26,30 @@ export default function DividerText() {
 
   const content2 = (
     <div>
-                  <Typography gutterBottom variant="h4" component="div">
-              Kine og Tønnes gifter seg
-            </Typography>
-            <Typography variant="body1" color="text.secondary">
-              9. juli!
-            </Typography>
+      <Typography gutterBottom variant="h4" component="div">
+        Kine og Tønnes gifter seg
+      </Typography>
+      <Typography variant="h6" color="text.secondary">
+        9. juli!
+      </Typography>
     </div>
   );
 
   return (
-    <Paper
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        maxWidth: 'auto',
-        margin: 'auto 0',
-        marginY: '5%',
-        marginX: '5%',
-        padding: '4%',
-      }}
-    >
-      <Grid container>
-        <Grid item xs sx={{ paddingTop: 16, paddingX: 8, paddingBottom: 8 }}>
+    <Paper sx={{ height: '100%' }}>
+      <Grid
+        container
+        direction="row"
+        justifyContent="space-between"
+        alignItems="center"
+        minHeight="100%"
+        padding={5}
+      >
+        <Grid item xs={8} md={4}>
           {content2}
         </Grid>
         <Divider orientation="vertical" flexItem></Divider>
-        <Grid item xs sx={{ paddingTop: 16, paddingX: 8, paddingBottom: 8 }}>
+        <Grid item xs={8} md={4}>
           {content1}
         </Grid>
       </Grid>

@@ -15,11 +15,11 @@ import Svar from './pages/Svar';
 function App() {
   const [open, setOpen] = React.useState(true);
   return (
-    <div style={{ minHeight: '100vh' }}>
+    <div style={{ overflow: 'auto', height: '100vh' }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <BrowserRouter>
-          <ResponsiveAppBar displayHeader={open}/>
+          <ResponsiveAppBar displayHeader={open} />
 
           <Routes>
             <Route path="/" element={<Home open={open} setOpen={setOpen} />}>

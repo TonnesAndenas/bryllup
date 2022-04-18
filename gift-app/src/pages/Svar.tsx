@@ -6,8 +6,9 @@ export default function Svar() {
     <Grid
       container
       direction="column"
-      justifyContent="center"
+      justifyContent="flex-start"
       alignItems="center"
+      height={"auto"}
       padding={5}
     >
       <Rsvp />

@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { Box, Dialog, Grid, Slide, Typography } from '@mui/material';
+import { Dialog, Grid, Slide } from '@mui/material';
 import { TransitionProps } from '@mui/material/transitions';
 import Banner from '../components/Banner';
-import DividerText from '../components/DividerText';
 import { Dispatch, SetStateAction } from 'react';
 
 const Transition = React.forwardRef(function Transition(
@@ -25,12 +24,13 @@ export default function Home({ open, setOpen }: HomeProps) {
       container
       xs={12}
       direction="column"
-      justifyContent="center"
+      justifyContent="space-between"
       alignItems="center"
+      sx={{ overflow: 'auto' }}
     >
-      <Grid item xs={10}>
+      <Grid item xs={12}>
         <Dialog
-          fullScreen
+          fullScreen={true}
           open={open}
           TransitionComponent={Transition}
           transitionDuration={1200}
@@ -39,15 +39,16 @@ export default function Home({ open, setOpen }: HomeProps) {
             container
             xs={12}
             direction="column"
-            justifyContent="center"
+            justifyContent="space-between"
             alignItems="center"
             onClick={() => setOpen(false)}
           >
-            <img src={require('../images/bryllup.png')} height="90%" />
-
-            <Typography variant="h4" align="center">
-              Velkommen!
-            </Typography>
+            <Grid item height="100vh" display="flex" flexDirection="column">
+              <img
+                src={require('../images/invitasjon_midt.png')}
+                height="100%"
+              />
+            </Grid>
           </Grid>
         </Dialog>
       </Grid>
@@ -69,11 +70,8 @@ export default function Home({ open, setOpen }: HomeProps) {
           direction="row"
           justifyContent="center"
           alignItems="stretch"
-
         >
-          <Grid item xs={4} md={8}>
-            <DividerText />
-          </Grid>
+          <Grid item xs={4} md={8}></Grid>
         </Grid>
       </Grid>
     </Grid>

@@ -36,23 +36,8 @@ export default function DividerText() {
   );
 
   return (
-    <Paper sx={{ height: '100%' }}>
-      <Grid
-        container
-        direction="row"
-        justifyContent="space-between"
-        alignItems="center"
-        minHeight="100%"
-        padding={5}
-      >
-        <Grid item xs={8} md={4}>
-          {content2}
-        </Grid>
-        <Divider orientation="vertical" flexItem></Divider>
-        <Grid item xs={8} md={4}>
-          {content1}
-        </Grid>
-      </Grid>
+    <Paper elevation={3} >
+{content2}
     </Paper>
   );
 }

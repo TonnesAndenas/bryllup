@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 
 const images = [
   {
-    url: '/static/images/buttons/breakfast.jpg',
+    url: 'src/images/forlovelse.JPG',
     title: 'Breakfast',
     width: '40%',
   },
@@ -99,7 +99,7 @@ export default function ComplexButtonHome() {
             width: image.width,
           }}
         >
-          <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+          <ImageSrc style={{ backgroundImage: `require(${image.url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
           <Image>
             <Typography

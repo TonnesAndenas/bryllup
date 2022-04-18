@@ -37,13 +37,13 @@ export default function Home({ open, setOpen }: HomeProps) {
         >
           <Grid
             container
-            xs={12}
-            direction="column"
-            justifyContent="space-between"
-            alignItems="center"
+            display={'flex'}
+            direction="row"
+            justifyContent="center"
+            alignItems="space-between"
             onClick={() => setOpen(false)}
           >
-            <Grid item height="100vh" display="flex" flexDirection="column">
+            <Grid item height="90vh" display="flex" flexDirection="column">
               <img
                 src={require('../images/invitasjon_midt.png')}
                 height="100%"

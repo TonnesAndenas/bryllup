@@ -8,7 +8,8 @@ export default function Svar() {
       direction="column"
       justifyContent="flex-start"
       alignItems="center"
-      height={"auto"}
+      height={'1150px'}
+      width={'100%'}
       padding={5}
     >
       <Rsvp />

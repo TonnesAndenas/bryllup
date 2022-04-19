@@ -20,33 +20,42 @@ interface HomeProps {
 
 export default function Home({ open, setOpen }: HomeProps) {
   return (
-    <Grid
-      container
-      xs={12}
-      direction="column"
-      justifyContent="space-between"
-      alignItems="center"
-      sx={{ overflow: 'auto' }}
-    >
-      <Grid item xs={12}>
+    <Grid container xs={12} direction="column">
+      <Grid
+        item
+        xs={12}
+        sx={{
+          direction: 'column',
+        }}
+      >
         <Dialog
           fullScreen={true}
+          fullWidth={true}
           open={open}
           TransitionComponent={Transition}
           transitionDuration={1200}
+          sx={{
+            direction: 'column',
+          }}
         >
           <Grid
             container
             display={'flex'}
-            direction="row"
-            justifyContent="center"
-            alignItems="space-between"
+            direction="column"
+            height={'100%'}
             onClick={() => setOpen(false)}
           >
-            <Grid item height="90vh" display="flex" flexDirection="column">
+            <Grid
+              item
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+              height={'100%'}
+            >
               <img
                 src={require('../images/invitasjon_midt.png')}
-                height="100%"
+                style={{ maxWidth: '95%', maxHeight: '95%' }}
               />
             </Grid>
           </Grid>

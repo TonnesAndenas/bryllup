@@ -27,7 +27,7 @@ interface ResponsiveAppBarProps {
   displayHeader: boolean;
 }
 
-const ResponsiveAppBar = ({ displayHeader }: ResponsiveAppBarProps) => {
+const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
   let navigate = useNavigate();
 
   const handleCloseNavMenu = (event) => {
@@ -35,7 +35,7 @@ const ResponsiveAppBar = ({ displayHeader }: ResponsiveAppBarProps) => {
   };
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
+  const openX = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -44,7 +44,7 @@ const ResponsiveAppBar = ({ displayHeader }: ResponsiveAppBarProps) => {
   };
 
   return (
-    <AppBar position="sticky" sx={{ display: displayHeader ? 'none' : 'flex' }}>
+    <AppBar position="sticky" sx={{ display: displayHeader ? 'flex' : 'flex' }}>
       <Container maxWidth="xl" disableGutters>
         <Toolbar disableGutters>
           <Grid
@@ -127,7 +127,7 @@ const ResponsiveAppBar = ({ displayHeader }: ResponsiveAppBarProps) => {
               <Menu
                 id="long-menu"
                 anchorEl={anchorEl}
-                open={open}
+                open={openX}
                 onClick={handleClose}
                 onClose={handleClose}
               >

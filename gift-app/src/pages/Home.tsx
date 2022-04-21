@@ -3,6 +3,7 @@ import { Dialog, Grid, Slide } from '@mui/material';
 import { TransitionProps } from '@mui/material/transitions';
 import Banner from '../components/Banner';
 import { Dispatch, SetStateAction } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -16,6 +17,11 @@ const Transition = React.forwardRef(function Transition(
 interface HomeProps {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+const usePathname = () => {
+  const location = useLocation();
+  return location.pathname;
 }
 
 export default function Home({ open, setOpen }: HomeProps) {

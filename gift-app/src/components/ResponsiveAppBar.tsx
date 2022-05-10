@@ -4,8 +4,17 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import { Grid, IconButton, Menu, MenuItem, Typography } from '@mui/material';
+import {
+  Grid,
+  IconButton,
+  Menu,
+  MenuItem,
+  Paper,
+  Typography,
+} from '@mui/material';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import SendIcon from '@mui/icons-material/Send';
+import { FormatUnderlined } from '@mui/icons-material';
 
 const HOME = 'Hjem';
 const TID = 'Tid';
@@ -44,19 +53,37 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
   };
 
   return (
-    <AppBar position="sticky" sx={{ display: displayHeader ? 'flex' : 'flex' }}>
+    <AppBar
+      sx={{
+        height: '96px',
+        top: '0px',
+        position: 'fixed',
+      }}
+    >
+      <Paper
+        square={true}
+        elevation={3}
+        sx={{
+          maxHeight: '32px',
+          minHeight: '32px',
+          minWidth: '100%',
+          top: '0',
+          backgroundColor: '#497996',
+        }}
+      />
       <Container maxWidth="xl" disableGutters>
         <Toolbar disableGutters>
           <Grid
             container
             direction="row"
             justifyContent="space-between"
-            alignItems="baseline"
+            alignItems="center"
           >
             <Grid
               item
               xs={2}
               justifyContent="center"
+              alignItems={'center'}
               sx={{
                 display: { xs: 'none', md: 'flex' },
               }}
@@ -70,7 +97,7 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
               item
               xs={8}
               sx={{
-                justifyContent: 'center',
+                justifyContent: 'space-evenly',
                 justifySelf: 'center',
                 display: {
                   xs: 'none',
@@ -81,17 +108,11 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
               {pages.map((page, index) =>
                 index === pages.length - 1 ? (
                   <Button
-                    variant="outlined"
-                    color="secondary"
-                    size="large"
+                    variant="text"
+                    sx={{color: 'black'}}
+                    endIcon={<SendIcon />}
                     key={page.name}
                     onClick={handleCloseNavMenu}
-                    style={{ border: '2px solid' }}
-                    sx={{
-                      my: '16px',
-                      color: 'text.primary',
-                      paddingTop: '12px',
-                    }}
                   >
                     <Typography variant="h6" style={{ fontWeight: 'bold' }}>
                       {page.name}
@@ -99,10 +120,10 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
                   </Button>
                 ) : (
                   <Button
-                    size="large"
+                    variant="text"
                     key={page.name}
                     onClick={handleCloseNavMenu}
-                    sx={{ my: '16px', color: 'white', paddingTop: '14px' }}
+                    sx={{ color: 'white' }}
                   >
                     <Typography variant="h6">{page.name}</Typography>
                   </Button>

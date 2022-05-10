@@ -4,6 +4,7 @@ import { TransitionProps } from '@mui/material/transitions';
 import Banner from '../components/Banner';
 import { Dispatch, SetStateAction } from 'react';
 import { useLocation } from 'react-router-dom';
+import ComplexButtonHome from '../components/ComplexButtonHome';
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -22,11 +23,17 @@ interface HomeProps {
 const usePathname = () => {
   const location = useLocation();
   return location.pathname;
-}
+};
 
 export default function Home({ open, setOpen }: HomeProps) {
   return (
-    <Grid container xs={12} direction="column">
+    <Grid
+      container
+      direction="column"
+      justifyContent="space-between"
+      alignItems="center"
+      minHeight={'100%'}
+    >
       <Grid
         item
         xs={12}
@@ -74,20 +81,13 @@ export default function Home({ open, setOpen }: HomeProps) {
         direction="column"
         justifyContent="center"
         alignItems="center"
+        paddingTop={12}
         sx={{ display: open ? 'none' : 'flex' }}
       >
         <Grid item xs={12}>
           <Banner />
         </Grid>
-        <Grid
-          container
-          xs={12}
-          direction="row"
-          justifyContent="center"
-          alignItems="stretch"
-        >
-          <Grid item xs={4} md={8}></Grid>
-        </Grid>
+
       </Grid>
     </Grid>
   );

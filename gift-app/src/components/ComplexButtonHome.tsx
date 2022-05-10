@@ -8,12 +8,12 @@ const images = [
   {
     url: 'src/images/forlovelse.JPG',
     title: 'Breakfast',
-    width: '40%',
+    width: '30%',
   },
   {
-    url: '/static/images/buttons/burgers.jpg',
+    url: 'https://enigeogtro.no/static/media/prideCropped.6fac5717c588a52bc962.JPG',
     title: 'Burgers',
-    width: '30%',
+    width: '40%',
   },
   {
     url: '/static/images/buttons/camera.jpg',

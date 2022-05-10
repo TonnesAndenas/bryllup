@@ -8,7 +8,8 @@ export default function Sted() {
       direction="row"
       justifyContent="center"
       alignItems="center"
-      padding={5}
+      paddingY={16}
+      paddingX={3}
     >
       <CardSolstua />
     </Grid>

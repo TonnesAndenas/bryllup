@@ -45,7 +45,7 @@ export default function CardBryllupsreise() {
               >
                 <Button variant="contained" size="large">
                   <VolunteerActivismRoundedIcon />
-                  Nrk.no
+                  MANGLER
                 </Button>
               </IconButton>
             </CardActions>

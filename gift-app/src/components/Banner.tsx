@@ -3,9 +3,8 @@ import { Grid } from '@mui/material';
 
 export default function Banner() {
   return (
-    <Grid
+    <Grid container justifyContent={'flex-end'}
       sx={{
-        position: 'static',
         height: 'auto',
         width: '100%',
       }}

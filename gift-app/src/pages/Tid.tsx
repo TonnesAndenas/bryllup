@@ -8,7 +8,8 @@ export default function Tid() {
     direction="column"
     justifyContent="center"
     alignItems="center"
-    padding={5}
+    paddingY={16}
+    paddingX={3}
   >
       <CustomizedTimeline />
     </Grid>

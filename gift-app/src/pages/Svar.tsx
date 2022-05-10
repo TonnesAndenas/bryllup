@@ -8,9 +8,10 @@ export default function Svar() {
       direction="column"
       justifyContent="flex-start"
       alignItems="center"
-      height={'1150px'}
+      height={'1300px'}
       width={'100%'}
-      padding={5}
+      paddingY={16}
+      paddingX={3}
     >
       <Rsvp />
     </Grid>

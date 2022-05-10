@@ -5,10 +5,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import DirectionsRoundedIcon from '@mui/icons-material/DirectionsRounded';
+import VolunteerActivismRoundedIcon from '@mui/icons-material/VolunteerActivismRounded';
 import { Grid, IconButton } from '@mui/material';
 
-export default function CardNorwayDesigns() {
+export default function CardVinglass() {
   return (
     <Grid item xs={12} md={4}>
       <Card sx={{ height: '100%' }}>
@@ -22,17 +22,15 @@ export default function CardNorwayDesigns() {
           <Grid item>
             <CardMedia
               component="img"
-              alt="Butikken Norway Designs"
-              image={require('../images/norwaydesignsTegning.jpg')}
+              alt="Captain Haddock drinking, Tintin"
+              image={require('../images/tintinHaddock.jpg')}
             />
-            <CardContent>
+            <CardContent sx={{ minHeigth: '40%' }}>
               <Typography gutterBottom variant="h4" component="div">
-                #4 Gaveliste hos Norway Designs
+                #5 Vinglass!
               </Typography>
               <Typography variant="body1" color="text.secondary">
-                I butikken til Norway Designs (Lille Grensen 7) har vi lagt
-                igjen en analog ønskeliste. Dra innom og kryss av, om du føler
-                deg inspirert.
+                Vi ønsker oss vinglass X og Y fra Z. Skål!
               </Typography>
             </CardContent>
           </Grid>
@@ -40,13 +38,13 @@ export default function CardNorwayDesigns() {
           <Grid item>
             <CardActions>
               <IconButton
-                href="https://goo.gl/maps/AZwtYyafiZM1vhJ78"
+                href="https://www.nrk.no/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Button variant="contained" size="large">
-                  <DirectionsRoundedIcon />
-                  Google Maps
+                  <VolunteerActivismRoundedIcon />
+                  MANGLER
                 </Button>
               </IconButton>
             </CardActions>

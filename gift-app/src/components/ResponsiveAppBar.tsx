@@ -220,13 +220,6 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
               </Button>
             </Grid>
 
-            <Grid
-              item
-              xs={2}
-              sx={{
-                display: { xs: 'none', md: 'flex' },
-              }}
-            />
 
             <Grid item sx={{ display: { xs: 'flex', md: 'none' } }}>
               <IconButton onClick={handleClick} size="large">
@@ -254,9 +247,10 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
               sx={{
                 display: { xs: 'flex', md: 'none' },
                 paddingRight: '64px',
+                backgroundColor: '#f3bd49'
               }}
             >
-              <Typography variant="h6" color="text.secondary">
+              <Typography variant="h5" color="text.secondary" sx={{paddingLeft: '8px'}}>
                 9. Juli 2022
               </Typography>
             </Grid>

@@ -24,7 +24,7 @@ export default function Footer() {
           bgcolor: '#282728',
         }}
       >
-        <Typography variant="h6" align="center" color="white">
+        <Typography variant="h6" align="center" color="white" sx={{paddingTop: '8px'}}>
           {'Alea iacta est!'}
         </Typography>
         <Paper sx={{height: '1px', marginX: '2%', marginBottom: '16px'}} />

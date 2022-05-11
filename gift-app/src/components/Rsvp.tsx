@@ -10,11 +10,12 @@ export default function Banner() {
       justifyContent="center"
       sx={{ height: '100%', width: '100%' }}
     >
-      <Paper sx={{ height: '100%', width: '100%' }}>
+      <Paper sx={{boxShadow: 'none', height: '100%', width: '100%' }}>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSeyHEngydDeBeETQfPdRdAoAJWJQiVejJSm2Aq0Y3J3_ITjmg/viewform?embedded=true"
           width="100%"
           height="100%"
+          style={{borderWidth: '0px'}}
         >
           Loading…
         </iframe>

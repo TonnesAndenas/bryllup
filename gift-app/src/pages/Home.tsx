@@ -81,7 +81,6 @@ export default function Home({ open, setOpen }: HomeProps) {
         direction="column"
         justifyContent="center"
         alignItems="center"
-        paddingTop={12}
         sx={{ display: open ? 'none' : 'flex' }}
       >
         <Grid item xs={12}>

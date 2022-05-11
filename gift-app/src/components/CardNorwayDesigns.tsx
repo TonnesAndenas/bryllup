@@ -19,7 +19,7 @@ export default function CardNorwayDesigns() {
           alignItems="center"
           minHeight="100%"
         >
-          <Grid item>
+          <Grid item minWidth="100%">
             <CardMedia
               component="img"
               alt="Butikken Norway Designs"
@@ -27,7 +27,7 @@ export default function CardNorwayDesigns() {
             />
             <CardContent>
               <Typography gutterBottom variant="h4" component="div">
-                #4 Gaveliste hos Norway Designs
+                #6 Gaveliste hos Norway Designs
               </Typography>
               <Typography variant="body1" color="text.secondary">
                 I butikken til Norway Designs (Lille Grensen 7) har vi lagt
@@ -44,7 +44,7 @@ export default function CardNorwayDesigns() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button variant="contained" size="large">
+                <Button variant="contained" size="large" color="secondary">
                   <DirectionsRoundedIcon />
                   Google Maps
                 </Button>

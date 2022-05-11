@@ -19,7 +19,7 @@ export default function CardRestauranter() {
           alignItems="center"
           minHeight="100%"
         >
-          <Grid item>
+          <Grid item minWidth="100%">
             <CardMedia
               component="img"
               alt="Montenegro"
@@ -27,11 +27,10 @@ export default function CardRestauranter() {
             />
             <CardContent sx={{ minHeigth: '40%' }}>
               <Typography gutterBottom variant="h4" component="div">
-                #2 Restauranter
+                #4 Restauranter
               </Typography>
               <Typography variant="body1" color="text.secondary">
-                Vi reiser til Montenegro for å drikke vin og bli solbrente. Vil
-                du bidra?
+                Vi er sultne! Hva med et gavekort på en restaurant?
               </Typography>
             </CardContent>
           </Grid>
@@ -43,7 +42,7 @@ export default function CardRestauranter() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button variant="contained" size="large">
+                <Button variant="contained" size="large" color="secondary">
                   <VolunteerActivismRoundedIcon />
                   MANGLER
                 </Button>

@@ -19,7 +19,7 @@ export default function CardVinglass() {
           alignItems="center"
           minHeight="100%"
         >
-          <Grid item>
+          <Grid item minWidth="100%">
             <CardMedia
               component="img"
               alt="Captain Haddock drinking, Tintin"
@@ -42,7 +42,7 @@ export default function CardVinglass() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button variant="contained" size="large">
+                <Button variant="contained" size="large" color="secondary">
                   <VolunteerActivismRoundedIcon />
                   MANGLER
                 </Button>

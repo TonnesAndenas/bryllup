@@ -46,7 +46,7 @@ export default function CardGiEffektivt() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button variant="contained" size="large">
+                <Button variant="contained" size="large" color="secondary">
                   <VolunteerActivismRoundedIcon />
                   gieffektivt.no
                 </Button>

@@ -10,7 +10,7 @@ export default function Svar() {
       alignItems="center"
       height={'1300px'}
       width={'100%'}
-      paddingY={16}
+      paddingY={6}
       paddingX={3}
     >
       <Rsvp />

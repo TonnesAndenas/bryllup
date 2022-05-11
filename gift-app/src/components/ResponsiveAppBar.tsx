@@ -4,17 +4,13 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import {
-  Grid,
-  IconButton,
-  Menu,
-  MenuItem,
-  Paper,
-  Typography,
-} from '@mui/material';
+import { Grid, IconButton, Menu, MenuItem, Typography } from '@mui/material';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
-import SendIcon from '@mui/icons-material/Send';
-import { FormatUnderlined } from '@mui/icons-material';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import SpatialAudioOffIcon from '@mui/icons-material/SpatialAudioOff';
+import PinDropIcon from '@mui/icons-material/PinDrop';
+import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
 const HOME = 'Hjem';
 const TID = 'Tid';
@@ -27,9 +23,9 @@ const pages = [
   { name: HOME, uri: '/visited' },
   { name: TID, uri: '/tid' },
   { name: STED, uri: '/sted' },
+  { name: SVAR, uri: '/svar' },
   { name: TOAST, uri: '/toast' },
   { name: GAVER, uri: '/gaver' },
-  { name: SVAR, uri: '/svar' },
 ];
 
 interface ResponsiveAppBarProps {
@@ -55,47 +51,35 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
   return (
     <AppBar
       sx={{
-        height: '96px',
+        height: { xs: '64px', md: '156px' },
         top: '0px',
         position: 'fixed',
+        justifyContent: 'center',
       }}
     >
-      <Paper
-        square={true}
-        elevation={3}
-        sx={{
-          maxHeight: '32px',
-          minHeight: '32px',
-          minWidth: '100%',
-          top: '0',
-          backgroundColor: '#497996',
-        }}
-      />
-      <Container maxWidth="xl" disableGutters>
-        <Toolbar disableGutters>
+      <Container
+        maxWidth="xl"
+        disableGutters
+        sx={{ height: { xs: '64px', md: '156px' } }}
+      >
+        <Toolbar disableGutters sx={{ height: { xs: '64px', md: '156px' } }}>
           <Grid
             container
             direction="row"
             justifyContent="space-between"
+            alignContent="center"
             alignItems="center"
+            sx={{ height: { xs: '64px', md: '156px' } }}
           >
-            <Grid
-              item
-              xs={2}
-              justifyContent="center"
-              alignItems={'center'}
-              sx={{
-                display: { xs: 'none', md: 'flex' },
-              }}
-            >
+            {/* <Grid item>
               <Typography variant="h6" color="text.secondary">
                 9. Juli 2022
               </Typography>
-            </Grid>
+            </Grid> */}
 
             <Grid
               item
-              xs={8}
+              xs={12}
               sx={{
                 justifyContent: 'space-evenly',
                 justifySelf: 'center',
@@ -103,32 +87,137 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
                   xs: 'none',
                   md: 'flex',
                 },
+                flexWrap: 'wrap',
+                alignSelf: 'baseline',
+                alignItems: 'flex-end',
               }}
             >
-              {pages.map((page, index) =>
-                index === pages.length - 1 ? (
-                  <Button
-                    variant="text"
-                    sx={{color: 'black'}}
-                    endIcon={<SendIcon />}
-                    key={page.name}
-                    onClick={handleCloseNavMenu}
-                  >
-                    <Typography variant="h6" style={{ fontWeight: 'bold' }}>
-                      {page.name}
-                    </Typography>
-                  </Button>
-                ) : (
-                  <Button
-                    variant="text"
-                    key={page.name}
-                    onClick={handleCloseNavMenu}
-                    sx={{ color: 'white' }}
-                  >
-                    <Typography variant="h6">{page.name}</Typography>
-                  </Button>
-                )
-              )}
+              <Button
+                variant="text"
+                size="large"
+                sx={{
+                  color: 'black',
+                  flexDirection: 'column',
+                  alignContent: 'center',
+                  justifyContent: 'center',
+                }}
+                startIcon={
+                  <HomeOutlinedIcon
+                    sx={{ marginLeft: '8px', marginRight: '0px' }}
+                  />
+                }
+                key={pages[0].name}
+                onClick={handleCloseNavMenu}
+              >
+                <Typography variant="h5" style={{ fontWeight: 'bold' }}>
+                  {pages[0].name}
+                </Typography>
+              </Button>
+
+              <Button
+                variant="text"
+                size="large"
+                sx={{
+                  color: 'black',
+                  flexDirection: 'column',
+                  alignContent: 'center',
+                  justifyContent: 'center',
+                }}
+                startIcon={
+                  <AccessTimeIcon
+                    sx={{ marginLeft: '8px', marginRight: '0px' }}
+                  />
+                }
+                key={pages[1].name}
+                onClick={handleCloseNavMenu}
+              >
+                <Typography variant="h5" style={{ fontWeight: 'bold' }}>
+                  {pages[1].name}
+                </Typography>
+              </Button>
+
+              <Button
+                variant="text"
+                size="large"
+                sx={{
+                  color: 'black',
+                  flexDirection: 'column',
+                  alignContent: 'center',
+                  justifyContent: 'center',
+                }}
+                startIcon={
+                  <PinDropIcon sx={{ marginLeft: '8px', marginRight: '0px' }} />
+                }
+                key={pages[2].name}
+                onClick={handleCloseNavMenu}
+              >
+                <Typography variant="h5" style={{ fontWeight: 'bold' }}>
+                  {pages[2].name}
+                </Typography>
+              </Button>
+
+              <Button
+                variant="outlined"
+                color="inherit"
+                size="large"
+                sx={{
+                  marginBottom: '8px',
+                  maxHeight: '36px',
+                  color: 'black',
+                  outlineWidth: '1px',
+                  outlineColor: 'black',
+                }}
+                key={pages[3].name}
+                onClick={handleCloseNavMenu}
+              >
+                <Typography variant="h5" style={{ fontWeight: 'bold' }}>
+                  {pages[3].name}
+                </Typography>
+              </Button>
+
+              <Button
+                variant="text"
+                size="large"
+                sx={{
+                  color: 'black',
+                  flexDirection: 'column',
+                  alignContent: 'center',
+                  justifyContent: 'center',
+                }}
+                startIcon={
+                  <SpatialAudioOffIcon
+                    sx={{ marginLeft: '8px', marginRight: '0px' }}
+                  />
+                }
+                key={pages[4].name}
+                onClick={handleCloseNavMenu}
+              >
+                <Typography variant="h5" style={{ fontWeight: 'bold' }}>
+                  {pages[4].name}
+                </Typography>
+              </Button>
+
+              <Button
+                variant="text"
+                size="large"
+                sx={{
+                  color: 'black',
+                  flexDirection: 'column',
+                  alignContent: 'center',
+                  justifyContent: 'center',
+                }}
+                startIcon={
+                  <CardGiftcardIcon
+                    sx={{ marginLeft: '8px', marginRight: '0px' }}
+                  />
+                }
+                key={pages[5].name}
+                onClick={handleCloseNavMenu}
+              >
+                <Typography variant="h5" style={{ fontWeight: 'bold' }}>
+                  {pages[5].name}
+                </Typography>
+              </Button>
             </Grid>
 
             <Grid

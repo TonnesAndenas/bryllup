@@ -23,7 +23,7 @@ export default function CardBryllupsreise() {
             <CardMedia
               component="img"
               alt="Montenegro"
-              image={require('../images/montenegroApolloTint.jpg')}
+              image={require('../images/tintinThompson.png')}
             />
             <CardContent sx={{ minHeigth: '40%' }}>
               <Typography gutterBottom variant="h4" component="div">
@@ -43,7 +43,7 @@ export default function CardBryllupsreise() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button variant="contained" size="large">
+                <Button variant="contained" size="large" color="secondary">
                   <VolunteerActivismRoundedIcon />
                   MANGLER
                 </Button>

@@ -10,11 +10,11 @@ import CardVinglass from '../components/CardVinglass';
 export default function Gaveonsker() {
   return (
     <Grid
-      container
+      item
       direction="column"
       justifyContent="center"
       alignItems="center"
-      paddingY={16}
+      paddingY={6}
       paddingX={3}
     >
       <CardGavetekst />
@@ -27,10 +27,10 @@ export default function Gaveonsker() {
       >
         <CardGiEffektivt />
         <CardBryllupsreise />
-        <CardKano />
-        <CardNorwayDesigns />
-        <CardVinglass />
+        <CardKano />        
         <CardRestauranter />
+        <CardVinglass />
+        <CardNorwayDesigns />
       </Grid>
     </Grid>
   );

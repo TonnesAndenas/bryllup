@@ -21,7 +21,7 @@ export default function Footer() {
         sx={{
           minHeight: '96px',
           minWidth: '100%',
-          bgcolor: '#79a8c2',
+          bgcolor: '#282728',
         }}
       >
         <Typography variant="h6" align="center" color="white">

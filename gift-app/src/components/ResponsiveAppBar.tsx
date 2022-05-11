@@ -51,7 +51,7 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
   return (
     <AppBar
       sx={{
-        height: { xs: '64px', md: '156px' },
+        height: { xs: '64px', md: '128px' },
         top: '0px',
         position: 'fixed',
         justifyContent: 'center',
@@ -60,16 +60,16 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
       <Container
         maxWidth="xl"
         disableGutters
-        sx={{ height: { xs: '64px', md: '156px' } }}
+        sx={{ height: { xs: '64px', md: '128px' } }}
       >
-        <Toolbar disableGutters sx={{ height: { xs: '64px', md: '156px' } }}>
+        <Toolbar disableGutters sx={{ height: { xs: '64px', md: '128px' } }}>
           <Grid
             container
             direction="row"
             justifyContent="space-between"
             alignContent="center"
             alignItems="center"
-            sx={{ height: { xs: '64px', md: '156px' } }}
+            sx={{ height: { xs: '64px', md: '128px' } }}
           >
             {/* <Grid item>
               <Typography variant="h6" color="text.secondary">

@@ -11,7 +11,6 @@ import Gaveonsker from './pages/Gaveonsker';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import Footer from './components/Footer';
 import Svar from './pages/Svar';
-import TabsBar from './components/TabsBar';
 
 function App() {
   const [open, setOpen] = React.useState(true);
@@ -21,7 +20,7 @@ function App() {
         <CssBaseline />
         <BrowserRouter>
           <ResponsiveAppBar displayHeader={open} />
-          <Grid container sx={{paddingTop: {xs: "64px", md: "156px"}} }>
+          <Grid container sx={{paddingTop: {xs: "64px", md: "128px"}} }>
             <Routes>
               <Route path="/" element={<Home open={open} setOpen={setOpen} />}>
                 <Route

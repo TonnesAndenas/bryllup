@@ -23,7 +23,7 @@ function App() {
             <Grid item sx={{ height: { xs: '64px', md: '128px' } }}>
               <ResponsiveAppBar displayHeader={open} />
             </Grid>
-            <Grid item sx={{minHeight: { xs: 'calc(100vh - 160px)', md: '100vh - 224px' } }}>
+            <Grid item sx={{minHeight: { xs: 'calc(100vh - 160px)', md: 'calc(100vh - 224px)' } }}>
               <Routes>
                 <Route
                   path="/"

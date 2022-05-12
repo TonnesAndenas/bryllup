@@ -85,7 +85,6 @@ export default function Home({ open, setOpen }: HomeProps) {
         <Grid item xs={12}>
           <Banner />
         </Grid>
-
       </Grid>
     </Grid>
   );

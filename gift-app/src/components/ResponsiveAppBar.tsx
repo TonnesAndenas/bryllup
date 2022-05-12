@@ -55,11 +55,12 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
         top: '0px',
         position: 'fixed',
         justifyContent: 'center',
+        bgcolor: 'primary.main',
       }}
     >
       <Container
-        maxWidth="xl"
         disableGutters
+        maxWidth={false}
         sx={{ height: { xs: '64px', md: '128px' } }}
       >
         <Toolbar disableGutters sx={{ height: { xs: '64px', md: '128px' } }}>
@@ -71,15 +72,34 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
             alignItems="center"
             sx={{ height: { xs: '64px', md: '128px' } }}
           >
-            {/* <Grid item>
-              <Typography variant="h6" color="text.secondary">
+            <Grid
+              item
+              xs={1}
+              sx={{
+                display: {
+                  xs: 'none',
+                  md: 'flex',
+                },
+              }}
+            >
+              <Typography
+                variant="h5"
+                bgcolor="secondary.main"
+                padding={1}
+                sx={{
+                  display: {
+                    xs: 'none',
+                    md: 'flex',
+                  },
+                }}
+              >
                 9. Juli 2022
               </Typography>
-            </Grid> */}
+            </Grid>
 
             <Grid
               item
-              xs={12}
+              xs={10}
               sx={{
                 justifyContent: 'space-evenly',
                 justifySelf: 'center',
@@ -214,7 +234,7 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
                 key={pages[5].name}
                 onClick={handleCloseNavMenu}
               >
-                <Typography variant="h5" style={{ fontWeight: 'bold' }}>
+                <Typography variant="h6" style={{ fontWeight: 'bold' }}>
                   {pages[5].name}
                 </Typography>
               </Button>
@@ -222,9 +242,12 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
 
             <Grid
               item
-              xs={2}
+              xs={1}
               sx={{
-                display: { xs: 'none', md: 'flex' },
+                display: {
+                  xs: 'none',
+                  md: 'flex',
+                },
               }}
             />
 
@@ -254,9 +277,14 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
               sx={{
                 display: { xs: 'flex', md: 'none' },
                 paddingRight: '64px',
+                backgroundColor: '#f3bd49',
               }}
             >
-              <Typography variant="h6" color="text.secondary">
+              <Typography
+                variant="h5"
+                color="text.secondary"
+                sx={{ paddingLeft: '8px' }}
+              >
                 9. Juli 2022
               </Typography>
             </Grid>

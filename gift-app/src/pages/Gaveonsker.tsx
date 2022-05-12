@@ -14,8 +14,8 @@ export default function Gaveonsker() {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      paddingY={6}
-      paddingX={3}
+      paddingY={4}
+      paddingX={4}
     >
       <CardGavetekst />
       <Grid

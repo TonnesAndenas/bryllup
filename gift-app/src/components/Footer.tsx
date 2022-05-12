@@ -11,7 +11,7 @@ export default function Footer() {
         position: 'relative',
         bottom: '0px',
         minWidth: '100%',
-        maxHeight: '128px',
+        maxHeight: '96px',
       }}
       component="footer"
     >
@@ -21,10 +21,10 @@ export default function Footer() {
         sx={{
           minHeight: '96px',
           minWidth: '100%',
-          bgcolor: '#282728',
+          bgcolor: 'primary.dark',
         }}
       >
-        <Typography variant="h6" align="center" color="white">
+        <Typography variant="h6" align="center" color="white" sx={{paddingTop: '8px'}}>
           {'Alea iacta est!'}
         </Typography>
         <Paper sx={{height: '1px', marginX: '2%', marginBottom: '16px'}} />

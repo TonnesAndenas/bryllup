@@ -7,9 +7,12 @@ const gronn = "#6ebba9"
 const blaa = "#79a8c2"
 const blaaLys = "#a9d8f4"
 const blaaMork = "#497996"
-const morkeGraa = "#282728"
-const lyseGraa = "#d7d8d7"
+const morkeGraa = "#a6a7a6"
+const graa = "#d7d8d7"
+const lyseGraa = "#F5F5F6"
 const stavernGul = "#f3bd49"
+const morkeGul = "#bd8d11"
+const lyseGul = "#ffef7a"
 
 
 export const theme = createTheme({
@@ -25,14 +28,14 @@ export const theme = createTheme({
   
   palette: {
     primary: {
-      main: lyseGraa,
-      dark: blaaMork,
-      light: blaaLys
+      main: graa,
+      dark: morkeGraa,
+      light: lyseGraa,
     },
     secondary: {
       main: stavernGul,
-      dark: blaaMork,
-      light: gronnLys,
+      dark: morkeGul,
+      light: lyseGul,
     },
   },
 });

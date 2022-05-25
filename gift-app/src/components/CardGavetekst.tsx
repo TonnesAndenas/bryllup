@@ -16,12 +16,7 @@ export default function CardGavetekst() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
             dictum iaculis tellus vitae elementum. In vel nibh at leo suscipit
             vestibulum id sit amet quam. Suspendisse hendrerit sapien urna, vel
-            ornare enim sagittis vitae. Phasellus neque quam, semper ac mauris
-            ut, tincidunt bibendum mauris. Sed eu auctor justo. Maecenas
-            imperdiet, purus at convallis feugiat, nulla quam dictum nisl, vel
-            congue augue mi in lacus. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Pellentesque
-            vestibulum laoreet tincidunt.
+            ornare enim sagittis vitae.
           </Typography>
         </CardContent>
       </Card>

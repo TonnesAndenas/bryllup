@@ -30,25 +30,15 @@ export default function CardBryllupsreise() {
                 #2 Bryllupsreise til Montenegro!
               </Typography>
               <Typography variant="body1" color="text.secondary">
-                Vi reiser til Montenegro for å drikke vin og bli solbrente. Vil
-                du bidra?
+                Vi reiser til Montenegro for å bade, spise sjømat, drikke god
+                vin og nyte livet. Vi setter stor pris på et bidrag til
+                reisekassen! <br /> <br />
+                Bidrag kan overføres til konto 1224 . 80 . 57856.
+                <br /> <br />
+                Hvis du velger dette, er det ekstra hyggelig for oss om du tar
+                med et fysisk kort i bryllupet, så vi får takket ordentlig.
               </Typography>
             </CardContent>
-          </Grid>
-
-          <Grid item>
-            <CardActions>
-              <IconButton
-                href="https://www.nrk.no/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="contained" size="large" color="secondary">
-                  <VolunteerActivismRoundedIcon />
-                  MANGLER
-                </Button>
-              </IconButton>
-            </CardActions>
           </Grid>
         </Grid>
       </Card>

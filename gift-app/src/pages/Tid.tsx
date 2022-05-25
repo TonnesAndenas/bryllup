@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import CustomizedTimeline from '../components/CustomizedTimeline';
+import CardTidslinje from '../components/CardTidslinje';
 
 export default function Tid() {
   return (
@@ -11,7 +11,7 @@ export default function Tid() {
     paddingY={4}
     paddingX={4}
   >
-      <CustomizedTimeline />
+      <CardTidslinje />
     </Grid>
   );
 }

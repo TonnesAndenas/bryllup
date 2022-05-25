@@ -30,7 +30,7 @@ export default function CardVinglass() {
                 #5 Vinglass!
               </Typography>
               <Typography variant="body1" color="text.secondary">
-                Vi ønsker oss vinglass X og Y fra Z. Skål!
+              Vi ønsker oss vinglass! Disse ligger inne på vår digitale gaveliste hos Illums Bolighus.
               </Typography>
             </CardContent>
           </Grid>
@@ -38,13 +38,13 @@ export default function CardVinglass() {
           <Grid item>
             <CardActions>
               <IconButton
-                href="https://www.nrk.no/"
+                href="https://www.illumsbolighus.no/on/demandware.store/Sites-illums_bolighus_no-Site/nb_NO/GiftRegistry-ShowOthers?id=bbbea3aabfaac199f3b68e17df"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Button variant="contained" size="large" color="secondary">
                   <VolunteerActivismRoundedIcon />
-                  MANGLER
+                  Link til vinglass
                 </Button>
               </IconButton>
             </CardActions>

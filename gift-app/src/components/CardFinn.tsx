@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import VolunteerActivismRoundedIcon from '@mui/icons-material/VolunteerActivismRounded';
 import { Grid, IconButton } from '@mui/material';
 
-export default function CardKano() {
+export default function CardFinn() {
   return (
     <Grid item xs={12} md={4}>
       <Card sx={{ height: '100%' }}>
@@ -22,22 +22,32 @@ export default function CardKano() {
           <Grid item>
             <CardMedia
               component="img"
-              alt="Montenegro"
-              image={require('../images/tintin.png')}
+              alt="Finn.no logo"
+              image={require('../images/finn.png')}
             />
-            <CardContent sx={{ minHeigth: '40%' }}>
+            <CardContent>
               <Typography gutterBottom variant="h4" component="div">
-                #4 Spleisegave! Kano
+                #6 Hva med noe brukt?
               </Typography>
               <Typography variant="body1" color="text.secondary">
-                Vi ønsker oss en kano som vi kan bruke på hytta. Til kanoen
-                trengs tilbehør som årer, redningsvester, tralle med mer. <br />{' '}
-                <br />
-                Ta kontakt med August Myrseth (tlf: 915 90 046) så fort som
-                mulig om du vil være med på spleiselaget - det blir selvsagt
-                bare noe av om mange nok melder seg.
+                Dette klarer du selv!
               </Typography>
             </CardContent>
+          </Grid>
+
+          <Grid item>
+            <CardActions>
+              <IconButton
+                href="https://www.finn.no/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="contained" size="large" color="secondary">
+                  <VolunteerActivismRoundedIcon />
+                  finn.no
+                </Button>
+              </IconButton>
+            </CardActions>
           </Grid>
         </Grid>
       </Card>

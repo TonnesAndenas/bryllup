@@ -1,5 +1,6 @@
 import { Grid } from '@mui/material';
 import CardBryllupsreise from '../components/CardBryllupsreise';
+import CardFinn from '../components/CardFinn';
 import CardGavetekst from '../components/CardGavetekst';
 import CardGiEffektivt from '../components/CardGiEffektivt';
 import CardKano from '../components/CardKano';
@@ -27,10 +28,10 @@ export default function Gaveonsker() {
       >
         <CardGiEffektivt />
         <CardBryllupsreise />
-        <CardKano />        
         <CardRestauranter />
+        <CardKano />        
         <CardVinglass />
-        <CardNorwayDesigns />
+        <CardFinn />
       </Grid>
     </Grid>
   );

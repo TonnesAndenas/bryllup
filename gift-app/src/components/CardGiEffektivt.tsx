@@ -30,11 +30,9 @@ export default function CardGiEffektivt() {
                 #1 Gi Effektivt
               </Typography>
               <Typography variant="body1" color="text.secondary">
-                Formålet til gieffektivt.no er å samle inn penger til effektive
-                hjelpeorganisasjoner slik at man bidrar mest mulig til å
-                forbedre livene til våre medmennesker. <br />
+                Gieffektivt.no er en donasjonsportal som distribuerer donasjoner til organisasjoner som jobber særlig kostnadseffektivt. Vi setter stor pris på en gave til dem, som kan gis via deres nettside gieffektivt.no. <br />
                 <br />
-                En gave til dem er den fineste bryllupsgaven vi kan tenke oss!
+                Hvis du velger dette er det ekstra hyggelig for oss om du tar med et fysisk kort i bryllupet, så vi får takket ordentlig.
               </Typography>
             </CardContent>
           </Grid>

@@ -27,27 +27,14 @@ export default function CardRestauranter() {
             />
             <CardContent sx={{ minHeigth: '40%' }}>
               <Typography gutterBottom variant="h4" component="div">
-                #4 Restauranter
+                #3 Restauranter
               </Typography>
               <Typography variant="body1" color="text.secondary">
-                Vi er sultne! Hva med et gavekort på en restaurant?
+                Vi er sultne! Hva med et gavekort på en restaurant? <br /> Vi elsker god
+                mat, og ønsker oss gavekort på restauranter som vi kan
+                bruke utover høsten og vinteren.
               </Typography>
             </CardContent>
-          </Grid>
-
-          <Grid item>
-            <CardActions>
-              <IconButton
-                href="https://www.nrk.no/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="contained" size="large" color="secondary">
-                  <VolunteerActivismRoundedIcon />
-                  MANGLER
-                </Button>
-              </IconButton>
-            </CardActions>
           </Grid>
         </Grid>
       </Card>

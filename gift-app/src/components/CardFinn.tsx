@@ -29,7 +29,7 @@ export default function CardFinn() {
               <Typography gutterBottom variant="h4" component="div">
                 #6 Hva med noe brukt?
               </Typography>
-              <Typography variant="body1" color="text.secondary">
+              <Typography variant="h6" color="text.secondary">
                 Dette klarer du selv!
               </Typography>
             </CardContent>

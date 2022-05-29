@@ -29,7 +29,7 @@ export default function CardGiEffektivt() {
               <Typography gutterBottom variant="h4" component="div">
                 #1 Gi Effektivt
               </Typography>
-              <Typography variant="body1" color="text.secondary">
+              <Typography variant="h6" color="text.secondary">
                 Gieffektivt.no er en donasjonsportal som distribuerer donasjoner til organisasjoner som jobber særlig kostnadseffektivt. Vi setter stor pris på en gave til dem, som kan gis via deres nettside gieffektivt.no. <br />
                 <br />
                 Hvis du velger dette er det ekstra hyggelig for oss om du tar med et fysisk kort i bryllupet, så vi får takket ordentlig.

@@ -29,7 +29,7 @@ export default function CardVinglass() {
               <Typography gutterBottom variant="h4" component="div">
                 #5 Vinglass!
               </Typography>
-              <Typography variant="body1" color="text.secondary">
+              <Typography variant="h6" color="text.secondary">
               Vi ønsker oss vinglass! Disse ligger inne på vår digitale gaveliste hos Illums Bolighus.
               </Typography>
             </CardContent>

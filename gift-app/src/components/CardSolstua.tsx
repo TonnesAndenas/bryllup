@@ -27,10 +27,18 @@ export default function CardSolstua() {
             />
             <CardContent>
               <Typography gutterBottom variant="h4" component="div">
-                Solstua
+                Om Solstua
               </Typography>
               <Typography variant="h6" color="text.secondary">
-                Thorleif Haugs vei 14, 0791 Oslo
+                Både vielse, middag og fest skal foregå på Solstua i
+                Voksenkollen. Solstua ble bygget i 1905 som jaktvilla for Sam
+                Eyde, og det ryktes at dronning Maud ofte tok turen ned fra
+                Kongsseteren for å tilbringe tid her. Å være på Solstua føles
+                litt som å få fri tilgang til Folkemuseet.
+                <br /> <br />
+              </Typography>
+              <Typography variant="h6">
+                <b>Adresse: Thorleif Haugs vei 14, 0791 Oslo</b>
               </Typography>
             </CardContent>
           </Grid>

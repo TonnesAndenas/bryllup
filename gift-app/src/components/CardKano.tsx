@@ -1,12 +1,9 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import VolunteerActivismRoundedIcon from '@mui/icons-material/VolunteerActivismRounded';
-import { Grid, IconButton } from '@mui/material';
+import { Grid } from '@mui/material';
 
 export default function CardKano() {
   return (
@@ -29,7 +26,7 @@ export default function CardKano() {
               <Typography gutterBottom variant="h4" component="div">
                 #4 Spleisegave! Kano
               </Typography>
-              <Typography variant="body1" color="text.secondary">
+              <Typography variant="h6" color="text.secondary">
                 Vi ønsker oss en kano som vi kan bruke på hytta. Til kanoen
                 trengs tilbehør som årer, redningsvester, tralle med mer. <br />{' '}
                 <br />

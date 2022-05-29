@@ -1,12 +1,9 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import VolunteerActivismRoundedIcon from '@mui/icons-material/VolunteerActivismRounded';
-import { Grid, IconButton } from '@mui/material';
+import { Grid } from '@mui/material';
 
 export default function CardBryllupsreise() {
   return (
@@ -29,7 +26,7 @@ export default function CardBryllupsreise() {
               <Typography gutterBottom variant="h4" component="div">
                 #2 Bryllupsreise til Montenegro!
               </Typography>
-              <Typography variant="body1" color="text.secondary">
+              <Typography variant="h6" color="text.secondary">
                 Vi reiser til Montenegro for å bade, spise sjømat, drikke god
                 vin og nyte livet. Vi setter stor pris på et bidrag til
                 reisekassen! <br /> <br />

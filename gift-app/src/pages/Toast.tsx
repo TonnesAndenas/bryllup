@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import BannerToast from '../components/BannerToast';
+import CardToastmaster from '../components/CardToastmaster';
 
 export default function Toast() {
   return (
@@ -11,7 +11,7 @@ export default function Toast() {
       paddingY={4}
       paddingX={4}
     >
-      <BannerToast />
+      <CardToastmaster />
     </Grid>
   );
 }

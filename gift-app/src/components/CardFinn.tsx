@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import VolunteerActivismRoundedIcon from '@mui/icons-material/VolunteerActivismRounded';
 import { Grid, IconButton } from '@mui/material';
 
-export default function CardGiEffektivt() {
+export default function CardFinn() {
   return (
     <Grid item xs={12} md={4}>
       <Card sx={{ height: '100%' }}>
@@ -22,17 +22,15 @@ export default function CardGiEffektivt() {
           <Grid item>
             <CardMedia
               component="img"
-              alt="Lyspære"
-              image={require('../images/gieffektivt.png')}
+              alt="Finn.no logo"
+              image={require('../images/finn.png')}
             />
             <CardContent>
               <Typography gutterBottom variant="h4" component="div">
-                #1 Gi Effektivt
+                #6 Hva med noe brukt?
               </Typography>
               <Typography variant="h6" color="text.secondary">
-                Gieffektivt.no er en donasjonsportal som distribuerer donasjoner til organisasjoner som jobber særlig kostnadseffektivt. Vi setter stor pris på en gave til dem, som kan gis via deres nettside gieffektivt.no. <br />
-                <br />
-                Hvis du velger dette er det ekstra hyggelig for oss om du tar med et fysisk kort i bryllupet, så vi får takket ordentlig.
+                Dette klarer du selv!
               </Typography>
             </CardContent>
           </Grid>
@@ -40,13 +38,13 @@ export default function CardGiEffektivt() {
           <Grid item>
             <CardActions>
               <IconButton
-                href="https://gieffektivt.no/"
+                href="https://www.finn.no/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Button variant="contained" size="large" color="secondary">
                   <VolunteerActivismRoundedIcon />
-                  gieffektivt.no
+                  finn.no
                 </Button>
               </IconButton>
             </CardActions>

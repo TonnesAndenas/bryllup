@@ -93,7 +93,7 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
                   },
                 }}
               >
-                9. Juli 2022
+                9. juli 2022
               </Typography>
             </Grid>
 
@@ -285,7 +285,7 @@ const ResponsiveAppBar = ({ displayHeader = false }: ResponsiveAppBarProps) => {
                 color="text.secondary"
                 sx={{ paddingLeft: '8px' }}
               >
-                9. Juli 2022
+                9. juli 2022
               </Typography>
             </Grid>
           </Grid>
